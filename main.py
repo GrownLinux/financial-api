@@ -7,7 +7,6 @@ app = FastAPI()
 @app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
     contents = await file.read()
-    # Lógica para procesar el archivo
     analysis_results = analyze_financial_data(contents)
     visualizations = generate_visualizations(analysis_results)
     return {
