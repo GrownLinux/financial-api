@@ -3,6 +3,15 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 
 def generate_visualizations(analysis_results):
+    """
+    Generate visualizations for the given analysis results.
+
+    Parameters:
+    - analysis_results (dict): A dictionary containing analysis results, where the keys are sheet names and the values are lists of subtitles.
+
+    Returns:
+    - figures (dict): A dictionary containing the generated visualizations encoded as base64 strings, where the keys are sheet names and the values are the encoded images.
+    """
     figures = {}
     for sheet, subtitles in analysis_results.items():
         plt.figure(figsize=(10, 5))
