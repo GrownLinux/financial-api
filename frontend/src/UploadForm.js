@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const UploadForm = () => {
+const UploadForm = ({ onFileUpload }) => {  // Accept an optional onFileUpload prop
     const [file, setFile] = useState(null);
     const [response, setResponse] = useState(null);
 
@@ -15,13 +15,20 @@ const UploadForm = () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await fetch("http://127.0.0.1:8000/upload/", {
-            method: "POST",
-            body: formData,
-        });
+        try {
+            const res = await fetch("http://127.0.0.1:8000/upload/", {
+                method: "POST",
+                body: formData,
+            });
 
-        const data = await res.json();
-        setResponse(data);
+            const data = await res.json();
+            setResponse(data);
+            if (onFileUpload) {
+                onFileUpload(data);  // Notify parent component if callback is provided
+            }
+        } catch (error) {
+            console.error("Error uploading file:", error);
+        }
     };
 
     return (

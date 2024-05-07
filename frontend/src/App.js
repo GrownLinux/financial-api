@@ -1,15 +1,18 @@
-// src/App.js
-import React from "react";
-import UploadForm from "./UploadForm";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './LandingPage';
+import FinancialDashboard from './FinancialDashboard';
+import './App.css';
 
 function App() {
-    return (
-        <div className="App">
-            <h1>Financial Data Uploader</h1>
-            <UploadForm />
-        </div>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<FinancialDashboard />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

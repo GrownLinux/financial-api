@@ -1,43 +1,42 @@
 /* App.css */
-
-/* Styling for the UploadForm */
-.upload-container {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  max-width: 400px;
-}
-
-.upload-title {
-  margin-bottom: 16px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.upload-input {
-  display: block;
-  margin-bottom: 16px;
-}
-
-.upload-button {
-  background-color: #61dafb;
+.App-header {
+  background-color: #282c34;
   color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 20px;
+  text-align: center;
 }
 
-.upload-button:hover {
-  background-color: #21a1f1;
+.content {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust height based on header */
 }
 
-.response-container {
-  margin-top: 20px;
-  text-align: left;
-  font-family: monospace;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
