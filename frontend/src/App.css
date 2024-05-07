@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Styling for the UploadForm */
+.upload-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 400px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.upload-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.upload-input {
+  display: block;
+  margin-bottom: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.upload-button {
+  background-color: #61dafb;
   color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-button:hover {
+  background-color: #21a1f1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.response-container {
+  margin-top: 20px;
+  text-align: left;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
