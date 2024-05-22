@@ -4,6 +4,12 @@ Esta es una API para cargar archivos Excel con datos financieros, analizar una a
 
 ## Instalación
 
+Here is the video where you can extract the Excel files to upload to the API.:      https://www.youtube.com/watch?v=oXLN7pe4EZA
+
+
+
+
+
 ```bash
 pip install -r requirements.txt
 
